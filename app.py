@@ -505,7 +505,8 @@ if not st.session_state.df1.empty:
           st.pyplot(fig)
             
             
-            
+          st.write(df_final.shape)
+  
                 
                
         
