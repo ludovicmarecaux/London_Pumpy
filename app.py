@@ -506,9 +506,8 @@ if not st.session_state.df1.empty:
             
             
             
-                 
-        
-        
+                
+               
         
   if st.button('New intervention ?', on_click=reset_button):
     st.session_state.df1=st.session_state.df1.iloc[0:0]
