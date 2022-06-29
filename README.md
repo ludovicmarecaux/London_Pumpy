@@ -9,5 +9,5 @@ A partir de l’année 2022 et pour les 5 prochaines années, un nouveau plan d�
 Pour cela, nous mettrons en place trois modélisations. Dans un premier temps, nous créerons un modèle capable de définir le nombre de camions à envoyer en fonction des éléments connus au moment de l’appel. Ensuite, nous prédirons si les véhicules envoyés sur l’intervention arriveront dans le délai objectif des 360s. Et enfin, nous affinerons notre étude en estimant le temps d’arrivée sur site des premiers secours. 
 
 Pour ce travail, nous possédons deux tables composées de jeux de données répertoriant toutes les informations des interventions entre Janvier 2018 et Octobre 2021 :
-Les informations sur l'appareil mobilisé, son lieu de déploiement et les heures d'arrivée sur les lieux de l'incident et 
-Les informations sur la date et le lieu de l'incident ainsi que sur le type d'incident traité.
+les informations sur l'appareil mobilisé, son lieu de déploiement et les heures d'arrivée sur les lieux de l'incident et 
+les informations sur la date et le lieu de l'incident ainsi que sur le type d'incident traité.
