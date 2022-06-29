@@ -504,7 +504,7 @@ if not st.session_state.df1.empty:
           # Afficher le graphique
           st.pyplot(fig)
             
-          st.dataframe(df_final)  
+            
             
                  
         
