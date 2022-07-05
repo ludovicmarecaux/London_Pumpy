@@ -449,7 +449,8 @@ if not st.session_state.df1.empty:
 
 
     #   st.snow()
-      st.write('Résultat: ',y_pred)
+      st.write('Résultat: ')
+      st.table(y_pred)
 
       #--------------------------- TRAVAUX GRAPHIQUE ---------------------------#
       
