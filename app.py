@@ -479,7 +479,7 @@ if not st.session_state.df1.empty:
           # Création du graphique
           import matplotlib.pyplot as plt
           fig = plt.figure(figsize= (len(y_pred)*2,4)) # *2 : à revoir en fonction du texte final retenu (plt.text)
-          plt.title("\n\nEstimate of the arrival time of the vehicles sent\n\
+          plt.title("\n\nEstimate of the arrival time of pumps sent\n\
           (min: sec | probability time <360 sec)\n\
           ('++' To report risk of underestimation)\n")
           plt.ylabel('in seconds')
