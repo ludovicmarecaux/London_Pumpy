@@ -427,11 +427,11 @@ if not st.session_state.df1.empty:
 
       # PREDICTIONS
       # calculer la prédiction du modèle
-      pred_df_reg = pd.DataFrame(np.round(par.predict(df_reg_ml), 0), columns = ['Temps estimé (secondes)'], index = df_reg_ml.index)
+      pred_df_reg = pd.DataFrame(np.round(par.predict(df_reg_ml), 0), columns = ['Estimated time (seconds)'], index = df_reg_ml.index)
       # prévoir une colonne pour signaler les risques de sous-estimation légère
-      pred_df_reg['Risque sous-estimation légère'] = ''
+      pred_df_reg['Light underestimation risk'] = ''
       # identifier le numéro (index) de la colonne d'alerte pour sous-estimation possible
-      under_estim_col = pred_df_reg.columns.get_loc('Risque sous-estimation légère')
+      under_estim_col = pred_df_reg.columns.get_loc('Light underestimation risk')
       # analyse des cas de sous-estimation possible selon critères définis
       for i in pred_df_reg.index:                      # pour chaque index du dataframe
           row_num = list(pred_df_reg.index).index(i)   # calculer le numéro (index) de la ligne
@@ -439,7 +439,7 @@ if not st.session_state.df1.empty:
           if df_reg['Station_Code_of_ressource'][i] in topslowest_code:
               pred_df_reg.iloc[row_num, under_estim_col] = 'oui'   # si c'est une caserne du top, signaler risque par "oui"
       # Afficher les prédictions
-      pred_df_reg['Temps estimé (secondes)'] = pred_df_reg['Temps estimé (secondes)'].astype('int')
+      pred_df_reg['Estimated time (seconds)'] = pred_df_reg['Estimated time (seconds)'].astype('int')
     #   pred_df_reg
 
       # Concaténer régression avec classification
@@ -449,13 +449,13 @@ if not st.session_state.df1.empty:
 
 
     #   st.snow()
-      st.write('Résultat: ')
+      st.write('Result: ')
       st.table(y_pred)
 
       #--------------------------- TRAVAUX GRAPHIQUE ---------------------------#
       
       # liste des couleurs
-      graph_color = ['orange' if x > 360 else 'lime' for x in y_pred['Temps estimé (secondes)']]
+      graph_color = ['orange' if x > 360 else 'lime' for x in y_pred['Estimated time (seconds)']]
 
       # paramètrage de la zone sur 3 colonnes (avec gestion proportion de taille pour rendu lisible)
       col_params = len(y_pred)
@@ -466,10 +466,10 @@ if not st.session_state.df1.empty:
           # Texte à afficher
           graph_text = []
           for i in y_pred.index:
-              pred_seconds = y_pred['Temps estimé (secondes)'][i]
+              pred_seconds = y_pred['Estimated time (seconds)'][i]
               pred_proba = int(round(y_pred['% to arrive before 360 seconds '][i],0))
               
-              if y_pred['Risque sous-estimation légère'][i] == 'oui':
+              if y_pred['Light underestimation risk'][i] == 'oui':
                   graph_text.append("{}:{:02d} ++ | {}%"\
                                     .format(pred_seconds//60, pred_seconds%60, pred_proba))
               else:              
@@ -485,7 +485,7 @@ if not st.session_state.df1.empty:
           plt.ylabel('in seconds')
           plt.axhline(360, c='red', ls='--', lw=0.6, label = '360 seconds')
           # Graphique en barres
-          plt.bar(x = y_pred.index, height = y_pred["Temps estimé (secondes)"], color = graph_color)
+          plt.bar(x = y_pred.index, height = y_pred["Estimated time (seconds)"], color = graph_color)
           
           # Légende des couleurs utilisées
           import matplotlib.patches as mpatches
@@ -495,7 +495,7 @@ if not st.session_state.df1.empty:
           
           # Afficher le texte
           for t in range(len(graph_text)):
-              y_text = y_pred["Temps estimé (secondes)"][t]
+              y_text = y_pred["Estimated time (seconds)"][t]
               plt.text(x = y_pred.index[t],
                        y = y_text,
                        s = graph_text[t],
