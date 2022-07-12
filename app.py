@@ -479,11 +479,11 @@ if not st.session_state.df1.empty:
           # Création du graphique
           import matplotlib.pyplot as plt
           fig = plt.figure(figsize= (len(y_pred)*2,4)) # *2 : à revoir en fonction du texte final retenu (plt.text)
-          plt.title("\n\nEstimation du temps d'arrivée des véhicules envoyés\n\
-          (min:sec  |  probabilité temps < 360 sec)\n\
-          ('++' pour signaler risque de sous-estimation)\n")
-          plt.ylabel('Temps en secondes')
-          plt.axhline(360, c='red', ls='--', lw=0.6, label = '360 secondes')
+          plt.title("\n\nEstimate of the arrival time of the vehicles sent\n\
+          (min: sec | probability time <360 sec)\n\
+          ('++' To report risk of underestimation)\n")
+          plt.ylabel('in seconds')
+          plt.axhline(360, c='red', ls='--', lw=0.6, label = '360 seconds')
           # Graphique en barres
           plt.bar(x = y_pred.index, height = y_pred["Temps estimé (secondes)"], color = graph_color)
           
