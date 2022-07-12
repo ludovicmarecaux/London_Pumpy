@@ -372,12 +372,12 @@ if st.sidebar.button('Add this pump to mobilised list'):
 
 if not st.session_state.df1.empty:
   if st.button('Predict Attendance Time for the pumps mobilised'):
-      st.dataframe(st.session_state.df1.rename(index=lambda s: 'Camion n°'+ str(s+1)))
+      st.dataframe(st.session_state.df1.rename(index=lambda s: 'Pump n°'+ str(s+1)))
       nb_ligne=st.session_state.df1.shape[0]
 
       #--------------------------- TRAVAUX REGRESSION ---------------------------#
       # récupérer la table de détail des véhicules à envoyer
-      df_reg = st.session_state.df1.rename(index=lambda s: 'Camion n°'+ str(s+1))
+      df_reg = st.session_state.df1.rename(index=lambda s: 'Pump n°'+ str(s+1))
       #--------------------------- FIN TRAVAUX REGRESSION ---------------------------#
 
       with st.spinner('Working in progress ...'):
@@ -393,10 +393,10 @@ if not st.session_state.df1.empty:
           "data_outputs/ml_target_360/sgd_optuna.joblib"
           )
       y_pred=sgd_optuna.predict_proba(df_final)
-      y_pred=pd.DataFrame(y_pred,columns=['% d\'arriver avant 360 secondes ',' % d\'arriver après 360 secondes'])
-      y_pred['% d\'arriver avant 360 secondes ']=100*y_pred['% d\'arriver avant 360 secondes ']
-      y_pred=y_pred.drop([' % d\'arriver après 360 secondes'],axis=1)
-      y_pred=y_pred.rename(index=lambda s: 'Camion n°'+ str(s+1))
+      y_pred=pd.DataFrame(y_pred,columns=['% to arrive before 360 seconds ',' % to arrive after 360 seconds'])
+      y_pred['% to arrive before 360 seconds ']=100*y_pred['% to arrive before 360 seconds ']
+      y_pred=y_pred.drop([' % to arrive after 360 seconds'],axis=1)
+      y_pred=y_pred.rename(index=lambda s: 'Pump n°'+ str(s+1))
       
       #--------------------------- TRAVAUX REGRESSION ---------------------------#
 
@@ -467,7 +467,7 @@ if not st.session_state.df1.empty:
           graph_text = []
           for i in y_pred.index:
               pred_seconds = y_pred['Temps estimé (secondes)'][i]
-              pred_proba = int(round(y_pred['% d\'arriver avant 360 secondes '][i],0))
+              pred_proba = int(round(y_pred['% to arrive before 360 seconds '][i],0))
               
               if y_pred['Risque sous-estimation légère'][i] == 'oui':
                   graph_text.append("{}:{:02d} ++ | {}%"\
