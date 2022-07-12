@@ -489,8 +489,8 @@ if not st.session_state.df1.empty:
           
           # Légende des couleurs utilisées
           import matplotlib.patches as mpatches
-          lime_patch = mpatches.Patch(color='lime', label='<= 360 secondes')
-          orange_patch = mpatches.Patch(color='orange', label='> 360 secondes')
+          lime_patch = mpatches.Patch(color='lime', label='<= 360 seconds')
+          orange_patch = mpatches.Patch(color='orange', label='> 360 seconds')
           plt.legend(handles=[lime_patch, orange_patch], bbox_to_anchor =(0.5, -0.1), loc = 'upper center')
           
           # Afficher le texte
