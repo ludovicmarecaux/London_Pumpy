@@ -12,6 +12,8 @@ les informations sur la date et le lieu de l'incident ainsi que sur le type d'in
 
 Pour cela, nous mettrons en place trois modélisations. Dans un premier temps, nous créerons un modèle capable de définir le nombre de camions à envoyer en fonction des éléments connus au moment de l’appel. Ensuite, nous prédirons si les véhicules envoyés sur l’intervention arriveront dans le délai objectif des 360s. Et enfin, nous affinerons notre étude en estimant le temps d’arrivée sur site des premiers secours. 
 
+Le rapport ainsi que le powerpoint de présentation sont situé dans la branche principale.
+
 L'application issu de ce travail est réalisé sur Streamlit : https://ludovicmarecaux-london-pumpy-app-d7h8wh.streamlitapp.com/
 
 
@@ -28,5 +30,7 @@ information on the mobilized aircraft, its place of deployment and the times of 
 information on the date and place of the incident as well as on the type of incident handled.
 
 For this, we will set up three models. First, we will create a model capable of defining the number of trucks to send based on what is known at the time of the call. Then, we will predict if the vehicles sent to the intervention will arrive within the objective time of 360s. And finally, we will refine our study by estimating the time of arrival on site of first aid.
+
+The report as well as the presentation powerpoint are located in the main branch.
 
 The application resulting from this work is made on Streamlit: https://ludovicmarecaux-london-pumpy-app-d7h8wh.streamlitapp.com/
