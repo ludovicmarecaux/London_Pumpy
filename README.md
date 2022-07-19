@@ -26,10 +26,10 @@ For the period 2017-2021, the 6th version of the "London Safety Plan" (document 
 From the year 2022 and for the next 5 years, a new action plan, London Pump.Py is implemented. The main objective will be to analyze and predict the intervention and mobilization time of the London fire brigade.
 
 For this work, we have two tables made up of data sets listing all the information from the interventions between January 2018 and October 2021:
-information on the mobilized aircraft, its place of deployment and the times of arrival at the scene of the incident and
+information on the mobilized pumps, its place of deployment and the times of arrival at the scene of the incident and
 information on the date and place of the incident as well as on the type of incident handled.
 
-For this, we will set up three models. First, we will create a model capable of defining the number of trucks to send based on what is known at the time of the call. Then, we will predict if the vehicles sent to the intervention will arrive within the objective time of 360s. And finally, we will refine our study by estimating the time of arrival on site of first aid.
+For this, we will set up three models. First, we will create a model capable of defining the number of pumps to send based on what is known at the time of the call. Then, we will predict if the vehicles sent to the intervention will arrive within the objective time of 360s. And finally, we will refine our study by estimating the time of arrival on site of first aid.
 
 The report as well as the presentation powerpoint are located in the main branch of this repo.
 
