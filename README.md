@@ -4,6 +4,8 @@ La brigade des pompiers de Londres est le service d'incendie et de sauvetage le 
 
 Pour la période 2017-2021, la 6ème version du “London Safety Plan” (document rassemblant les missions et objectifs de la brigrade des pompiers de Londres, source : https://www.london-fire.gov.uk/about-us/london-safety-plan/) était en vigueur, définissant les priorités afin notamment de réduire le temps d’arrivée sur site des camions pour rendre la ville de Londres plus sûre. Un des objectifs fixés était l’arrivée sur chaque lieu d’incident en moins de 360s.
 
+Un plan de Londres dynamique indiquant le nombre d'interventions et le temps d'intervention moyen pour chaque station, basé sur les 4 dernières années, est disponible à l'adresse suivante: https://ludomare.github.io/
+
 A partir de l’année 2022 et pour les 5 prochaines années, un nouveau plan d’action, London Pump.Py est mis en place. L’objectif principal sera d’analyser et prédire le temps d’intervention et de mobilisation de la brigade des pompiers de Londres.
 
 Pour ce travail, nous possédons deux tables composées de jeux de données répertoriant toutes les informations des interventions entre Janvier 2018 et Octobre 2021 :
@@ -14,8 +16,6 @@ Pour cela, nous mettrons en place trois modélisations. Dans un premier temps, n
 
 Le rapport ainsi que le powerpoint de présentation sont situé dans la branche principale de ce répertoire.
 
-Un plan de Londres dynamique indiquant le nombre d'interventions et le temps d'intervention moyen pour chaque station, basé sur les 4 dernières années, est disponible à l'adresse suivante: https://ludomare.github.io/
-
 L'application issu de ce travail est réalisé sur Streamlit : https://ludovicmarecaux-london-pumpy-app-d7h8wh.streamlitapp.com/
 
 
@@ -24,6 +24,8 @@ L'application issu de ce travail est réalisé sur Streamlit : https://ludovicma
 The London Fire Brigade is the busiest fire and rescue service in the UK and one of the largest firefighting and rescue organizations in the world.
 
 For the period 2017-2021, the 6th version of the "London Safety Plan" (document bringing together the missions and objectives of the London fire brigade, source: https://www.london-fire.gov.uk/about-us /london-safety-plan/) was in force, defining priorities in order in particular to reduce the time of arrival on site of trucks to make the city of London safer. One of the objectives set was to arrive at each incident site in less than 360s.
+
+A dynamic London plan indicating the number of interventions and the average intervention time for each station, based on the last 4 years, is available at the following address: https://ludomare.github.io/
 
 From the year 2022 and for the next 5 years, a new action plan, London Pump.Py is implemented. The main objective will be to analyze and predict the intervention and mobilization time of the London fire brigade.
 
@@ -34,7 +36,5 @@ information on the date and place of the incident as well as on the type of inci
 For this, we will set up three models. First, we will create a model capable of defining the number of pumps to send based on what is known at the time of the call. Then, we will predict if the vehicles sent to the intervention will arrive within the objective time of 360s. And finally, we will refine our study by estimating the time of arrival on site of first aid.
 
 The report as well as the presentation powerpoint are located in the main branch of this repo.
-
-A dynamic London plan indicating the number of interventions and the average intervention time for each station, based on the last 4 years, is available at the following address: https://ludomare.github.io/
 
 The application resulting from this work is made on Streamlit: https://ludovicmarecaux-london-pumpy-app-d7h8wh.streamlitapp.com/
