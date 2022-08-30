@@ -23,7 +23,7 @@ L'application issu de ce travail est réalisé sur Streamlit : https://ludovicma
 
 The London Fire Brigade is the busiest fire and rescue service in the UK and one of the largest firefighting and rescue organizations in the world.
 
-For the period 2017-2021, the 6th version of the "London Safety Plan" (document bringing together the missions and objectives of the London fire brigade, source: https://www.london-fire.gov.uk/about-us /london-safety-plan/) was in force, defining priorities in order in particular to reduce the time of arrival on site of trucks to make the city of London safer. One of the objectives set was to arrive at each incident site in less than 360s.
+For the period 2017-2021, the 6th version of the "London Safety Plan" (document bringing together the missions and objectives of the London fire brigade, source: https://www.london-fire.gov.uk/about-us/london-safety-plan/) was in force, defining priorities in order in particular to reduce the time of arrival on site of trucks to make the city of London safer. One of the objectives set was to arrive at each incident site in less than 360s.
 
 A dynamic London plan indicating the number of interventions and the average intervention time for each station, based on the last 4 years, is available at the following address: https://ludomare.github.io/
 
